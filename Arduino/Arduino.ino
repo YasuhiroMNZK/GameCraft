@@ -11,7 +11,7 @@ void loop() {
   int state = digitalRead(switchPin);
 
   if (state != lastState) {
-    delay(20); // チャタリング対策
+    delay(20);  // チャタリング対策
     state = digitalRead(switchPin);
 
     if (state != lastState) {
