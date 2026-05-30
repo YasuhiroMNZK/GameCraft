@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: 02
   m_EditorClassIdentifier: Assembly-CSharp::Kotodama
   number: 02
-  text: abcdefg
+  text: "\u3076\u3076\u6F2C\u3051\u3067\u3082\u3044\u304B\u304C\u3067\u3059\u30FC\uFF1F"
   MaxPower: 0
-  CommonAlert: 2
+  CommonAlert: 1
   KyoKotoba:
-  - b
-  - f
+  - "\u3076"
+  - "\u6F2C"
+  - "\u3051"
   KyoAlert: 5
