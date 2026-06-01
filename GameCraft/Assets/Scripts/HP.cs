@@ -1,21 +1,24 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class HP : MonoBehaviour
 {
-    [SerializeField] private int maxHP = 5; // 最大血量
-    [SerializeField] private GameObject heartPrefab; // 血量图片的预制体
-    [SerializeField] private Transform heartContainer; // 血量图片的容器
+    [SerializeField] private int maxHP = 5; 
+    [SerializeField] private GameObject heartPrefab; 
+    [SerializeField] private Transform heartContainer;
+    [SerializeField] private UnityEvent onDeath;
 
-    private int currentHP; // 当前血量
-    private GameObject[] hearts; // 血量图片的数组
+    private int currentHP; 
+    private GameObject[] hearts; 
+    private bool isDead = false;
 
     void Start()
     {
-        // 初始化血量
+      
         currentHP = maxHP;
 
-        // 创建血量图片
+      
         hearts = new GameObject[maxHP];
         for (int i = 0; i < maxHP; i++)
         {
@@ -23,20 +26,25 @@ public class HP : MonoBehaviour
         }
     }
 
-    // 扣血逻辑
+    
     public void TakeDamage(int damage)
     {
         currentHP -= damage;
-        currentHP = Mathf.Max(currentHP, 0); // 确保血量不会低于 0
+        currentHP = Mathf.Max(currentHP, 0); 
         UpdateHearts();
+        if (currentHP == 0 && !isDead)
+        {
+            isDead = true;
+            if (onDeath != null) onDeath.Invoke();
+        }
     }
 
-    // 更新血量图片显示
+
     private void UpdateHearts()
     {
         for (int i = 0; i < hearts.Length; i++)
         {
-            hearts[i].SetActive(i < currentHP); // 当前血量以内的图片显示，其他隐藏
+            hearts[i].SetActive(i < currentHP); 
         }
     }
 }
