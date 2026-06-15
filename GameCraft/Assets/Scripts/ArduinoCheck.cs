@@ -9,6 +9,7 @@ public class ArduinoCheck : MonoBehaviour
     SerialPort serial;
     public UnityEvent OnClosed;
     public UnityEvent OnOpened;
+    public UnityEvent OnShake;
 
     void Start()
     {
@@ -37,6 +38,11 @@ public class ArduinoCheck : MonoBehaviour
                     isClosed = false;
                     Debug.Log("がま口：開いた");
                     OnOpened?.Invoke(); 
+                }
+                if(data == "SHAKE")
+                {
+                Debug.Log("Shake!");
+                OnShake?.Invoke();
                 }
             }
             catch (System.TimeoutException) { }
