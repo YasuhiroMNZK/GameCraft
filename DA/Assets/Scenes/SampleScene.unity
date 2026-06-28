@@ -439,7 +439,6 @@ MonoBehaviour:
   targetPanel: {fileID: 281123110}
   targetCanvas: {fileID: 0}
   maxHoleRadius: 140
-  followSpeed: 2000
   expandSpeed: 5
   shrinkSpeed: 1200
   edgeSoftness: 40
@@ -715,7 +714,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: "\uFF13"
 --- !u!222 &385751411
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1148,7 +1147,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 725495222}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 379913514}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1822115771}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &725495222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1557,7 +1580,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: "\u554F\u984C\u6587"
 --- !u!222 &1047106422
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2065,7 +2088,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: "\uFF14"
 --- !u!222 &1502533409
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2144,7 +2167,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: "\uFF11"
 --- !u!222 &1521045462
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2566,7 +2589,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: "\uFF12"
 --- !u!222 &1908107340
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2645,7 +2668,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: "\u78BA\u8A8D"
 --- !u!222 &2084958614
 CanvasRenderer:
   m_ObjectHideFlags: 0
